@@ -159,7 +159,7 @@ void ReadBlock(const FunctionCallbackInfo<Value>& args) {
   int32_t len = args[1]->Int32Value();
   uint8_t data[len]; 
   Local<Value> err = Local<Value>::New(isolate, Null(isolate));
-  Local<Object> buffer = node::Buffer::New(len);
+  Local<Object> buffer = node::Buffer::New(isolate, len).ToLocalChecked();
 
   while (fd > 0) {
     if (i2c_smbus_read_i2c_block_data(fd, cmd, len, data) != len) {
