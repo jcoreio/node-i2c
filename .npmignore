@@ -4,6 +4,7 @@
 !**/*.d.ts
 !/*.md
 !yarn.lock
+!/binding.gyp
 /src
 /test
 /coverage
