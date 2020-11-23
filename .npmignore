@@ -5,7 +5,9 @@
 !/*.md
 !yarn.lock
 !/binding.gyp
-/src
+!/src/**/*.c
+!/src/**/*.cc
+!/src/**/*.h
 /test
 /coverage
 /flow-typed
