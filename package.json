@@ -69,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/korevec/node-i2c.git"
+    "url": "http://github.com/jcoreio/node-i2c.git"
   },
   "license": "BSD-3-Clause-Attribution",
   "dependencies": {
