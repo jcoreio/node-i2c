@@ -1,3 +1,10 @@
+.nyc_output
 node_modules
 build
 **.DS_Store
+es
+.eslintcache
+/*.js
+/*.js.flow
+/*.d.ts
+!/.babelrc.js
