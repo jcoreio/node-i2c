@@ -12,7 +12,7 @@ export default class I2C {
   private readonly readBlock = promisify(i2c.readBlock)
   private readonly writeBlock = promisify(i2c.writeBlock)
 
-  constructor({ device, address }: { device: string, address: number }) {
+  constructor({ device, address }: { device: string; address: number }) {
     this.device = device
     this.address = address
   }
@@ -26,8 +26,7 @@ export default class I2C {
   }
 
   close(): void {
-    if (this.isOpen)
-      i2c.close()
+    if (this.isOpen) i2c.close()
     this.isOpen = false
   }
 

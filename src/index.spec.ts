@@ -13,12 +13,13 @@ describe('node-i2c', () => {
   let i2c: I2C | undefined
 
   afterEach(() => {
-    if (i2c)
-      i2c.close()
+    if (i2c) i2c.close()
     i2c = undefined
   })
 
-  it('reads and writes from a JCore Iron Pi EEPROM device', async function (): Promise<void> {
+  it('reads and writes from a JCore Iron Pi EEPROM device', async function(): Promise<
+    void
+  > {
     this.timeout(2000)
     i2c = new I2C({ device: EEPROM_DEVICE, address: EEPROM_I2C_ADDR })
     const testBuf = Buffer.from(new Array(TEST_SEQUENCE_LEN).map(idx => idx))

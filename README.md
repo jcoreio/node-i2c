@@ -8,9 +8,9 @@ project's methods.
 
 ## Install
 
-````bash
+```bash
 $ yarn add @jcoreio/i2c
-````
+```
 
 ## Usage
 
@@ -41,7 +41,7 @@ $ sudo vi /etc/modules
 Add these two lines
 
 ```bash
-i2c-bcm2708 
+i2c-bcm2708
 i2c-dev
 ```
 
@@ -62,7 +62,7 @@ $ sudo modprobe i2c-bcm2708
 $ sudo modprobe i2c-dev
 ```
 
-Make device writable 
+Make device writable
 
 ```bash
 sudo chmod o+rw /dev/i2c*
@@ -74,16 +74,14 @@ Install gcc 4.8 (required for Nan)
 sudo apt-get install gcc-4.8 g++-4.8
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
-sudo update-alternatives --config gcc 
+sudo update-alternatives --config gcc
 ```
 
 Set correct device for version
 
 ```javascript
-
 new I2C({ address, device: '/dev/i2c-0' }) // rev 1
 new I2C({ address, device: '/dev/i2c-1' }) // rev 2
-
 ```
 
 ## Beaglebone
@@ -107,7 +105,7 @@ npm install i2c@0.1.8
 ## Projects using i2c
 
 - **bonescript** https://github.com/jadonk/bonescript/
-- **ADXL345** https://github.com/timbit123/ADXL345 
+- **ADXL345** https://github.com/timbit123/ADXL345
 - **HMC6343** https://github.com/omcaree/node-hmc6343
 - **LSM303** https://github.com/praneshkmr/node-lsm303
 - **MPU6050** https://github.com/jstapels/mpu6050/
