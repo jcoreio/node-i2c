@@ -4,4 +4,5 @@ module.exports = api => ({
     ['@babel/preset-env', { targets: { node: '12' } }],
     '@babel/preset-typescript',
   ],
+  ignore: api.env('coverage') || api.env('test') ? [] : ['src/**/*.spec.ts'],
 })
